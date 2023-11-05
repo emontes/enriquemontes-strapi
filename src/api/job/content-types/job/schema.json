@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "singularName": "job",
+    "pluralName": "jobs",
+    "displayName": "Job",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "company": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 4
+    },
+    "position": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "string",
+      "required": true
+    },
+    "desc": {
+      "displayName": "job_description",
+      "type": "component",
+      "repeatable": true,
+      "component": "description.job-description"
+    }
+  }
+}
