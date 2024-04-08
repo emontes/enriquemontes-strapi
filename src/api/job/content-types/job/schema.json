@@ -10,27 +10,51 @@
   "options": {
     "draftAndPublish": false
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "company": {
       "type": "string",
       "required": true,
       "unique": true,
-      "minLength": 4
+      "minLength": 4,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "position": {
       "type": "string",
-      "required": true
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "date": {
       "type": "string",
-      "required": true
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "desc": {
       "displayName": "job_description",
       "type": "component",
       "repeatable": true,
-      "component": "description.job-description"
+      "component": "description.job-description",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
