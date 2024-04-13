@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_hero_items_hero_sections",
+  "info": {
+    "displayName": "HeroSection",
+    "icon": "cube",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "BackgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "SubTitle": {
+      "type": "richtext"
+    },
+    "HeroActions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "button.buttons"
+    },
+    "Heading": {
+      "displayName": "Heading",
+      "type": "component",
+      "repeatable": false,
+      "component": "heading.heading",
+      "required": true
+    },
+    "HeroImage": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Centered": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

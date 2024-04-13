@@ -19,11 +19,11 @@
     "company": {
       "type": "string",
       "required": true,
-      "unique": true,
+      "unique": false,
       "minLength": 4,
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       }
     },

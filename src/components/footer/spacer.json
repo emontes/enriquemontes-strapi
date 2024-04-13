@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_footer_spacers",
+  "info": {
+    "displayName": "Spacer",
+    "icon": "filter"
+  },
+  "options": {},
+  "attributes": {
+    "Spacing": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

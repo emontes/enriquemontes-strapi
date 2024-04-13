@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_heading_headings",
+  "info": {
+    "displayName": "Heading",
+    "icon": "filter"
+  },
+  "options": {},
+  "attributes": {
+    "HeadingText": {
+      "type": "richtext"
+    },
+    "HeadingType": {
+      "type": "enumeration",
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
+      "default": "h1"
+    }
+  }
+}

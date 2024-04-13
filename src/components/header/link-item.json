@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_header_link_items",
+  "info": {
+    "displayName": "Link Item",
+    "icon": "link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "LinkText": {
+      "type": "string"
+    },
+    "LinkUrl": {
+      "type": "string"
+    },
+    "IsDropDown": {
+      "type": "boolean",
+      "default": false
+    },
+    "DropDownItems": {
+      "displayName": "DropDownItems",
+      "type": "component",
+      "repeatable": true,
+      "component": "header.drop-down-items"
+    }
+  }
+}

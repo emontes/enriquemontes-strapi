@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_simpl_p_simple_paragraphs",
+  "info": {
+    "displayName": "Simple Paragraph",
+    "icon": "feather",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Content": {
+      "type": "richtext",
+      "required": true
+    },
+    "ActionButtons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "button.buttons"
+    },
+    "IsParagraphSecondary": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

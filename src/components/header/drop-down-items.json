@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_header_drop_down_items",
+  "info": {
+    "displayName": "DropDownItems"
+  },
+  "options": {},
+  "attributes": {
+    "LinkText": {
+      "type": "string"
+    },
+    "LinkUrl": {
+      "type": "string"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

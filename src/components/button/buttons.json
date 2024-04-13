@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_button_buttons",
+  "info": {
+    "displayName": "Buttons",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "string"
+    },
+    "Link": {
+      "type": "string"
+    },
+    "Primary": {
+      "type": "boolean"
+    }
+  }
+}
