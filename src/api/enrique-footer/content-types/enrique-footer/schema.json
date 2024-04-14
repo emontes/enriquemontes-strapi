@@ -55,6 +55,33 @@
         "footer.footer-link",
         "footer.spacer"
       ]
+    },
+    "copyright": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "default": "copyright"
+    },
+    "allRights": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "default": "all rights reserved"
+    },
+    "siteMade": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "default": "Site made with:"
     }
   }
 }
