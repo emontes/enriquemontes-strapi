@@ -4,7 +4,8 @@
   "info": {
     "singularName": "enrique-page",
     "pluralName": "enrique-pages",
-    "displayName": "Enrique Page"
+    "displayName": "Enrique Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -33,7 +34,8 @@
       "type": "dynamiczone",
       "components": [
         "page-sections.hero-section",
-        "page-sections.simple-paragraph"
+        "page-sections.simple-paragraph",
+        "page-sections.hero-home"
       ]
     }
   }

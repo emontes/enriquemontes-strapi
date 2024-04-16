@@ -937,6 +937,7 @@ export interface ApiEnriquePageEnriquePage extends Schema.CollectionType {
     singularName: 'enrique-page';
     pluralName: 'enrique-pages';
     displayName: 'Enrique Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -955,7 +956,11 @@ export interface ApiEnriquePageEnriquePage extends Schema.CollectionType {
         };
       }>;
     PageSections: Attribute.DynamicZone<
-      ['page-sections.hero-section', 'page-sections.simple-paragraph']
+      [
+        'page-sections.hero-section',
+        'page-sections.simple-paragraph',
+        'page-sections.hero-home'
+      ]
     > &
       Attribute.SetPluginOptions<{
         i18n: {

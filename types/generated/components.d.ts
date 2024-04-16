@@ -87,6 +87,23 @@ export interface HeadingHeading extends Schema.Component {
   };
 }
 
+export interface PageSectionsHeroHome extends Schema.Component {
+  collectionName: 'components_page_sections_hero_homes';
+  info: {
+    displayName: 'HeroHome';
+    icon: 'gate';
+    description: '';
+  };
+  attributes: {
+    Header1: Attribute.String;
+    Header3: Attribute.String;
+    Header4: Attribute.String;
+    LinkText: Attribute.String;
+    LinkUrl: Attribute.String;
+    BackgroundImage: Attribute.Media;
+  };
+}
+
 export interface PageSectionsHeroSection extends Schema.Component {
   collectionName: 'components_hero_items_hero_sections';
   info: {
@@ -128,6 +145,7 @@ declare module '@strapi/types' {
       'header.drop-down-items': HeaderDropDownItems;
       'header.link-item': HeaderLinkItem;
       'heading.heading': HeadingHeading;
+      'page-sections.hero-home': PageSectionsHeroHome;
       'page-sections.hero-section': PageSectionsHeroSection;
       'page-sections.simple-paragraph': PageSectionsSimpleParagraph;
     }

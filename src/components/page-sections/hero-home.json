@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_page_sections_hero_homes",
+  "info": {
+    "displayName": "HeroHome",
+    "icon": "gate",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Header1": {
+      "type": "string"
+    },
+    "Header3": {
+      "type": "string"
+    },
+    "Header4": {
+      "type": "string"
+    },
+    "LinkText": {
+      "type": "string"
+    },
+    "LinkUrl": {
+      "type": "string"
+    },
+    "BackgroundImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
