@@ -44,7 +44,7 @@ export interface HeaderDropDownItems extends Schema.Component {
   attributes: {
     LinkText: Attribute.String;
     LinkUrl: Attribute.String;
-    Image: Attribute.Media;
+    Image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -100,7 +100,7 @@ export interface PageSectionsHeroHome extends Schema.Component {
     Header4: Attribute.String;
     LinkText: Attribute.String;
     LinkUrl: Attribute.String;
-    BackgroundImage: Attribute.Media;
+    BackgroundImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -112,11 +112,11 @@ export interface PageSectionsHeroSection extends Schema.Component {
     description: '';
   };
   attributes: {
-    BackgroundImage: Attribute.Media;
+    BackgroundImage: Attribute.Media<'images'>;
     SubTitle: Attribute.RichText;
     HeroActions: Attribute.Component<'button.buttons', true>;
     Heading: Attribute.Component<'heading.heading'> & Attribute.Required;
-    HeroImage: Attribute.Media;
+    HeroImage: Attribute.Media<'images', true>;
     Centered: Attribute.Boolean & Attribute.DefaultTo<false>;
   };
 }
