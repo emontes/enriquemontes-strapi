@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_page_sections_jobs",
+  "info": {
+    "displayName": "Jobs",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "ShowLink": {
+      "type": "boolean"
+    },
+    "LinkText": {
+      "type": "string"
+    }
+  }
+}

@@ -13,17 +13,6 @@ export interface ButtonButtons extends Schema.Component {
   };
 }
 
-export interface DescriptionJobDescription extends Schema.Component {
-  collectionName: 'components_description_job_descriptions';
-  info: {
-    displayName: 'job_description';
-    description: '';
-  };
-  attributes: {
-    name: Attribute.String;
-  };
-}
-
 export interface FooterFooterLink extends Schema.Component {
   collectionName: 'components_footer_footer_links';
   info: {
@@ -87,6 +76,17 @@ export interface HeadingHeading extends Schema.Component {
   };
 }
 
+export interface JobsJobDescription extends Schema.Component {
+  collectionName: 'components_description_job_descriptions';
+  info: {
+    displayName: 'job_description';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String;
+  };
+}
+
 export interface PageSectionsHeroHome extends Schema.Component {
   collectionName: 'components_page_sections_hero_homes';
   info: {
@@ -121,6 +121,19 @@ export interface PageSectionsHeroSection extends Schema.Component {
   };
 }
 
+export interface PageSectionsJobs extends Schema.Component {
+  collectionName: 'components_page_sections_jobs';
+  info: {
+    displayName: 'Jobs';
+    icon: 'stack';
+  };
+  attributes: {
+    Title: Attribute.String;
+    ShowLink: Attribute.Boolean;
+    LinkText: Attribute.String;
+  };
+}
+
 export interface PageSectionsSimpleParagraph extends Schema.Component {
   collectionName: 'components_simpl_p_simple_paragraphs';
   info: {
@@ -139,14 +152,15 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'button.buttons': ButtonButtons;
-      'description.job-description': DescriptionJobDescription;
       'footer.footer-link': FooterFooterLink;
       'footer.spacer': FooterSpacer;
       'header.drop-down-items': HeaderDropDownItems;
       'header.link-item': HeaderLinkItem;
       'heading.heading': HeadingHeading;
+      'jobs.job-description': JobsJobDescription;
       'page-sections.hero-home': PageSectionsHeroHome;
       'page-sections.hero-section': PageSectionsHeroSection;
+      'page-sections.jobs': PageSectionsJobs;
       'page-sections.simple-paragraph': PageSectionsSimpleParagraph;
     }
   }

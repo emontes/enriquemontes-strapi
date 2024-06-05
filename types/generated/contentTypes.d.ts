@@ -959,7 +959,8 @@ export interface ApiEnriquePageEnriquePage extends Schema.CollectionType {
       [
         'page-sections.hero-section',
         'page-sections.simple-paragraph',
-        'page-sections.hero-home'
+        'page-sections.hero-home',
+        'page-sections.jobs'
       ]
     > &
       Attribute.SetPluginOptions<{
@@ -1032,7 +1033,7 @@ export interface ApiJobJob extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    desc: Attribute.Component<'description.job-description', true> &
+    desc: Attribute.Component<'jobs.job-description', true> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

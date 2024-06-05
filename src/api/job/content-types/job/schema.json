@@ -49,7 +49,7 @@
       "displayName": "job_description",
       "type": "component",
       "repeatable": true,
-      "component": "description.job-description",
+      "component": "jobs.job-description",
       "pluginOptions": {
         "i18n": {
           "localized": true
