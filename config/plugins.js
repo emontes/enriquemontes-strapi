@@ -1,6 +1,7 @@
 module.exports = ({ env }) => ({
 	// ...
 	upload: {
+		
 		config: {
 			provider: "@strapi/provider-upload-cloudinary",
 			providerOptions: {
@@ -9,6 +10,9 @@ module.exports = ({ env }) => ({
 				api_secret: env("CLOUDINARY_SECRET"),
 			},
 		},
+		seo: {
+			enabled: true,
+		  },
 	},
 	// ...
 });
