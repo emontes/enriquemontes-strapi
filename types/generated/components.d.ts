@@ -76,14 +76,33 @@ export interface HeadingHeading extends Schema.Component {
   };
 }
 
-export interface JobsJobDescription extends Schema.Component {
-  collectionName: 'components_description_job_descriptions';
+export interface PageSectionItemsJobDescription extends Schema.Component {
+  collectionName: 'components_page_section_items_job_descriptions';
   info: {
-    displayName: 'job_description';
-    description: '';
+    displayName: 'JobDescription';
+    icon: 'file';
   };
   attributes: {
     name: Attribute.String;
+  };
+}
+
+export interface PageSectionItemsJobItem extends Schema.Component {
+  collectionName: 'components_page_section_items_job_items';
+  info: {
+    displayName: 'JobItem';
+    icon: 'briefcase';
+    description: '';
+  };
+  attributes: {
+    company: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        minLength: 4;
+      }>;
+    position: Attribute.String & Attribute.Required;
+    date: Attribute.String & Attribute.Required;
+    desc: Attribute.Component<'page-section-items.job-description', true>;
   };
 }
 
@@ -126,11 +145,13 @@ export interface PageSectionsJobs extends Schema.Component {
   info: {
     displayName: 'Jobs';
     icon: 'stack';
+    description: '';
   };
   attributes: {
     Title: Attribute.String;
     ShowLink: Attribute.Boolean;
     LinkText: Attribute.String;
+    Job: Attribute.Component<'page-section-items.job-item', true>;
   };
 }
 
@@ -208,7 +229,8 @@ declare module '@strapi/types' {
       'header.drop-down-items': HeaderDropDownItems;
       'header.link-item': HeaderLinkItem;
       'heading.heading': HeadingHeading;
-      'jobs.job-description': JobsJobDescription;
+      'page-section-items.job-description': PageSectionItemsJobDescription;
+      'page-section-items.job-item': PageSectionItemsJobItem;
       'page-sections.hero-home': PageSectionsHeroHome;
       'page-sections.hero-section': PageSectionsHeroSection;
       'page-sections.jobs': PageSectionsJobs;

@@ -998,68 +998,6 @@ export interface ApiEnriquePageEnriquePage extends Schema.CollectionType {
   };
 }
 
-export interface ApiJobJob extends Schema.CollectionType {
-  collectionName: 'jobs';
-  info: {
-    singularName: 'job';
-    pluralName: 'jobs';
-    displayName: 'Job';
-    description: '';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    company: Attribute.String &
-      Attribute.Required &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }> &
-      Attribute.SetMinMaxLength<{
-        minLength: 4;
-      }>;
-    position: Attribute.String &
-      Attribute.Required &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    date: Attribute.String &
-      Attribute.Required &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    desc: Attribute.Component<'jobs.job-description', true> &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::job.job', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::job.job', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    localizations: Attribute.Relation<
-      'api::job.job',
-      'oneToMany',
-      'api::job.job'
-    >;
-    locale: Attribute.String;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1081,7 +1019,6 @@ declare module '@strapi/types' {
       'api::enrique-footer.enrique-footer': ApiEnriqueFooterEnriqueFooter;
       'api::enrique-header.enrique-header': ApiEnriqueHeaderEnriqueHeader;
       'api::enrique-page.enrique-page': ApiEnriquePageEnriquePage;
-      'api::job.job': ApiJobJob;
     }
   }
 }

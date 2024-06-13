@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_page_section_items_job_descriptions",
+  "info": {
+    "displayName": "JobDescription",
+    "icon": "file"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

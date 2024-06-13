@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_page_section_items_job_items",
+  "info": {
+    "displayName": "JobItem",
+    "icon": "briefcase",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "company": {
+      "type": "string",
+      "required": true,
+      "unique": false,
+      "minLength": 4
+    },
+    "position": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "string",
+      "required": true
+    },
+    "desc": {
+        "type": "component",
+        "repeatable": true,
+        "component": "page-section-items.job-description"
+      }
+    
+  }
+}

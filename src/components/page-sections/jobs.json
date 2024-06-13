@@ -2,7 +2,8 @@
   "collectionName": "components_page_sections_jobs",
   "info": {
     "displayName": "Jobs",
-    "icon": "stack"
+    "icon": "stack",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -14,6 +15,12 @@
     },
     "LinkText": {
       "type": "string"
+    },
+    "Job": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page-section-items.job-item"
+      
     }
   }
 }
