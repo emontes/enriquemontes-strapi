@@ -68,9 +68,10 @@ export interface HeadingHeading extends Schema.Component {
   info: {
     displayName: 'Heading';
     icon: 'filter';
+    description: '';
   };
   attributes: {
-    HeadingText: Attribute.RichText;
+    HeadingText: Attribute.String;
     HeadingType: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']> &
       Attribute.DefaultTo<'h1'>;
   };
@@ -132,9 +133,9 @@ export interface PageSectionsHeroSection extends Schema.Component {
   };
   attributes: {
     BackgroundImage: Attribute.Media<'images'>;
-    SubTitle: Attribute.RichText;
-    HeroActions: Attribute.Component<'button.buttons', true>;
     Heading: Attribute.Component<'heading.heading'> & Attribute.Required;
+    SubTitle: Attribute.Component<'heading.heading'>;
+    HeroActions: Attribute.Component<'button.buttons', true>;
     HeroImage: Attribute.Media<'images', true>;
     Centered: Attribute.Boolean & Attribute.DefaultTo<false>;
   };

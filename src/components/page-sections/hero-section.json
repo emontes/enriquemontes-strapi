@@ -15,14 +15,6 @@
         "images"
       ]
     },
-    "SubTitle": {
-      "type": "richtext"
-    },
-    "HeroActions": {
-      "type": "component",
-      "repeatable": true,
-      "component": "button.buttons"
-    },
     "Heading": {
       "displayName": "Heading",
       "type": "component",
@@ -30,6 +22,16 @@
       "component": "heading.heading",
       "required": true
     },
+    "SubTitle": {
+      "type": "component",
+      "repeatable": false,
+      "component": "heading.heading"
+    },
+    "HeroActions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "button.buttons"
+    }, 
     "HeroImage": {
       "type": "media",
       "multiple": true,
@@ -42,5 +44,6 @@
       "type": "boolean",
       "default": false
     }
+    
   }
 }

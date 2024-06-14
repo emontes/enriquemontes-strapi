@@ -2,12 +2,13 @@
   "collectionName": "components_heading_headings",
   "info": {
     "displayName": "Heading",
-    "icon": "filter"
+    "icon": "filter",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "HeadingText": {
-      "type": "richtext"
+      "type": "string"
     },
     "HeadingType": {
       "type": "enumeration",
@@ -20,6 +21,6 @@
         "h6"
       ],
       "default": "h1"
-    }
+    }    
   }
 }
