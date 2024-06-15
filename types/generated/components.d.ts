@@ -135,6 +135,7 @@ export interface PageSectionsHeroHome extends Schema.Component {
     LinkText: Attribute.String;
     LinkUrl: Attribute.String;
     BackgroundImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    ProfileImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
