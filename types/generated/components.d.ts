@@ -107,6 +107,20 @@ export interface PageSectionItemsJobItem extends Schema.Component {
   };
 }
 
+export interface PageSectionItemsServiceItem extends Schema.Component {
+  collectionName: 'components_page_section_items_service_items';
+  info: {
+    displayName: 'Service Item';
+    icon: 'cube';
+    description: '';
+  };
+  attributes: {
+    icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Attribute.String;
+    text: Attribute.RichText;
+  };
+}
+
 export interface PageSectionsHeroHome extends Schema.Component {
   collectionName: 'components_page_sections_hero_homes';
   info: {
@@ -153,6 +167,18 @@ export interface PageSectionsJobs extends Schema.Component {
     ShowLink: Attribute.Boolean;
     LinkText: Attribute.String;
     Job: Attribute.Component<'page-section-items.job-item', true>;
+  };
+}
+
+export interface PageSectionsServices extends Schema.Component {
+  collectionName: 'components_page_sections_services';
+  info: {
+    displayName: 'Services';
+    icon: 'cloud';
+  };
+  attributes: {
+    BackgroundImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Service: Attribute.Component<'page-section-items.service-item', true>;
   };
 }
 
@@ -232,9 +258,11 @@ declare module '@strapi/types' {
       'heading.heading': HeadingHeading;
       'page-section-items.job-description': PageSectionItemsJobDescription;
       'page-section-items.job-item': PageSectionItemsJobItem;
+      'page-section-items.service-item': PageSectionItemsServiceItem;
       'page-sections.hero-home': PageSectionsHeroHome;
       'page-sections.hero-section': PageSectionsHeroSection;
       'page-sections.jobs': PageSectionsJobs;
+      'page-sections.services': PageSectionsServices;
       'page-sections.simple-paragraph': PageSectionsSimpleParagraph;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;

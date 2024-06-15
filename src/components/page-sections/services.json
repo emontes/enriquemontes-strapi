@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_page_sections_services",
+  "info": {
+    "displayName": "Services",
+    "icon": "cloud"
+  },
+  "options": {},
+  "attributes": {
+    "BackgroundImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Service": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page-section-items.service-item"
+    }
+  }
+}
