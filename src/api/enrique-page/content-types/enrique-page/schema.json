@@ -37,7 +37,8 @@
         "page-sections.simple-paragraph",
         "page-sections.hero-home",
         "page-sections.jobs",
-        "page-sections.services"
+        "page-sections.services",
+        "page-sections.resources-section"
       ]
     },
     "seo": {

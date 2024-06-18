@@ -171,6 +171,24 @@ export interface PageSectionsJobs extends Schema.Component {
   };
 }
 
+export interface PageSectionsResourcesSection extends Schema.Component {
+  collectionName: 'components_page_sections_resources_sections';
+  info: {
+    displayName: 'Resources Section';
+    icon: 'server';
+    description: '';
+  };
+  attributes: {
+    Title: Attribute.String;
+    resources: Attribute.Relation<
+      'page-sections.resources-section',
+      'oneToMany',
+      'api::resource.resource'
+    >;
+    HeadingType: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']>;
+  };
+}
+
 export interface PageSectionsServices extends Schema.Component {
   collectionName: 'components_page_sections_services';
   info: {
@@ -263,6 +281,7 @@ declare module '@strapi/types' {
       'page-sections.hero-home': PageSectionsHeroHome;
       'page-sections.hero-section': PageSectionsHeroSection;
       'page-sections.jobs': PageSectionsJobs;
+      'page-sections.resources-section': PageSectionsResourcesSection;
       'page-sections.services': PageSectionsServices;
       'page-sections.simple-paragraph': PageSectionsSimpleParagraph;
       'shared.meta-social': SharedMetaSocial;

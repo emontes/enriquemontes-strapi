@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_page_sections_resources_sections",
+  "info": {
+    "displayName": "Resources Section",
+    "icon": "server",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "resources": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::resource.resource"
+    },
+    "HeadingType": {
+      "type": "enumeration",
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ]
+    }
+  }
+}

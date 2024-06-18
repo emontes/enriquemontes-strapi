@@ -961,7 +961,8 @@ export interface ApiEnriquePageEnriquePage extends Schema.CollectionType {
         'page-sections.simple-paragraph',
         'page-sections.hero-home',
         'page-sections.jobs',
-        'page-sections.services'
+        'page-sections.services',
+        'page-sections.resources-section'
       ]
     > &
       Attribute.SetPluginOptions<{
@@ -999,6 +1000,52 @@ export interface ApiEnriquePageEnriquePage extends Schema.CollectionType {
   };
 }
 
+export interface ApiResourceResource extends Schema.CollectionType {
+  collectionName: 'resources';
+  info: {
+    singularName: 'resource';
+    pluralName: 'resources';
+    displayName: 'Resource';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: Attribute.String;
+    date: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    url: Attribute.String;
+    kind: Attribute.Enumeration<
+      [
+        'Cloud Computing',
+        'Content Management System',
+        'Database',
+        'E-commerce',
+        'Framework',
+        'Network Server',
+        'Operating System',
+        'Programming Language',
+        'Utility'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::resource.resource',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::resource.resource',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1020,6 +1067,7 @@ declare module '@strapi/types' {
       'api::enrique-footer.enrique-footer': ApiEnriqueFooterEnriqueFooter;
       'api::enrique-header.enrique-header': ApiEnriqueHeaderEnriqueHeader;
       'api::enrique-page.enrique-page': ApiEnriquePageEnriquePage;
+      'api::resource.resource': ApiResourceResource;
     }
   }
 }
