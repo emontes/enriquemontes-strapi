@@ -962,7 +962,7 @@ export interface ApiEnriquePageEnriquePage extends Schema.CollectionType {
         'page-sections.hero-home',
         'page-sections.jobs',
         'page-sections.services',
-        'page-sections.resources-section'
+        'page-sections.resour'
       ]
     > &
       Attribute.SetPluginOptions<{

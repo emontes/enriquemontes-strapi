@@ -1,19 +1,14 @@
 {
-  "collectionName": "components_page_sections_resources_sections",
+  "collectionName": "components_page_sections_resours",
   "info": {
-    "displayName": "Resources Section",
-    "icon": "server",
+    "displayName": "Resources",
+    "icon": "cog",
     "description": ""
   },
   "options": {},
   "attributes": {
     "Title": {
       "type": "string"
-    },
-    "resources": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::resource.resource"
     },
     "HeadingType": {
       "type": "enumeration",
@@ -25,6 +20,11 @@
         "h5",
         "h6"
       ]
+    },
+    "resources": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::resource.resource"
     }
   }
 }
