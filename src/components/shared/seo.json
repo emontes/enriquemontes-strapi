@@ -2,19 +2,20 @@
   "collectionName": "components_shared_seos",
   "info": {
     "displayName": "seo",
-    "icon": "search"
+    "icon": "search",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "metaTitle": {
       "required": true,
       "type": "string",
-      "maxLength": 60
+      "maxLength": 100
     },
     "metaDescription": {
       "type": "string",
       "required": true,
-      "maxLength": 160,
+      "maxLength": 210,
       "minLength": 50
     },
     "metaImage": {
