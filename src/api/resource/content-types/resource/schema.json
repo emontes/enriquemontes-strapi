@@ -49,6 +49,12 @@
         "Programming Language",
         "Utility"
       ]
+    },
+    "development": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::development.development",
+      "inversedBy": "resources"
     }
   }
 }

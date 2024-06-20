@@ -121,6 +121,22 @@ export interface PageSectionItemsServiceItem extends Schema.Component {
   };
 }
 
+export interface PageSectionsDevelopments extends Schema.Component {
+  collectionName: 'components_page_sections_developments';
+  info: {
+    displayName: 'Developments';
+    icon: 'briefcase';
+  };
+  attributes: {
+    Heading: Attribute.Component<'heading.heading'>;
+    developments: Attribute.Relation<
+      'page-sections.developments',
+      'oneToMany',
+      'api::development.development'
+    >;
+  };
+}
+
 export interface PageSectionsHeroHome extends Schema.Component {
   collectionName: 'components_page_sections_hero_homes';
   info: {
@@ -279,6 +295,7 @@ declare module '@strapi/types' {
       'page-section-items.job-description': PageSectionItemsJobDescription;
       'page-section-items.job-item': PageSectionItemsJobItem;
       'page-section-items.service-item': PageSectionItemsServiceItem;
+      'page-sections.developments': PageSectionsDevelopments;
       'page-sections.hero-home': PageSectionsHeroHome;
       'page-sections.hero-section': PageSectionsHeroSection;
       'page-sections.jobs': PageSectionsJobs;

@@ -788,6 +788,98 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiDevelopmentDevelopment extends Schema.CollectionType {
+  collectionName: 'developments';
+  info: {
+    singularName: 'development';
+    pluralName: 'developments';
+    displayName: 'Development';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slug: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    github: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    url: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    created: Attribute.Date &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    resources: Attribute.Relation<
+      'api::development.development',
+      'oneToMany',
+      'api::resource.resource'
+    >;
+    internal_notes: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::development.development',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::development.development',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::development.development',
+      'oneToMany',
+      'api::development.development'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiEnriqueFooterEnriqueFooter extends Schema.SingleType {
   collectionName: 'enrique_footers';
   info: {
@@ -962,7 +1054,8 @@ export interface ApiEnriquePageEnriquePage extends Schema.CollectionType {
         'page-sections.hero-home',
         'page-sections.jobs',
         'page-sections.services',
-        'page-sections.resour'
+        'page-sections.resour',
+        'page-sections.developments'
       ]
     > &
       Attribute.SetPluginOptions<{
@@ -1029,6 +1122,11 @@ export interface ApiResourceResource extends Schema.CollectionType {
         'Utility'
       ]
     >;
+    development: Attribute.Relation<
+      'api::resource.resource',
+      'manyToOne',
+      'api::development.development'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -1064,6 +1162,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::development.development': ApiDevelopmentDevelopment;
       'api::enrique-footer.enrique-footer': ApiEnriqueFooterEnriqueFooter;
       'api::enrique-header.enrique-header': ApiEnriqueHeaderEnriqueHeader;
       'api::enrique-page.enrique-page': ApiEnriquePageEnriquePage;
