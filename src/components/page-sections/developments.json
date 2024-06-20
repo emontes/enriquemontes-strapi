@@ -1,8 +1,9 @@
 {
   "collectionName": "components_page_sections_developments",
   "info": {
-    "displayName": "Developments",
-    "icon": "briefcase"
+    "displayName": "Dev",
+    "icon": "briefcase",
+    "description": ""
   },
   "options": {},
   "attributes": {

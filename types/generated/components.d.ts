@@ -124,8 +124,9 @@ export interface PageSectionItemsServiceItem extends Schema.Component {
 export interface PageSectionsDevelopments extends Schema.Component {
   collectionName: 'components_page_sections_developments';
   info: {
-    displayName: 'Developments';
+    displayName: 'Dev';
     icon: 'briefcase';
+    description: '';
   };
   attributes: {
     Heading: Attribute.Component<'heading.heading'>;
