@@ -794,6 +794,7 @@ export interface ApiDevelopmentDevelopment extends Schema.CollectionType {
     singularName: 'development';
     pluralName: 'developments';
     displayName: 'Development';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -848,7 +849,7 @@ export interface ApiDevelopmentDevelopment extends Schema.CollectionType {
       }>;
     resources: Attribute.Relation<
       'api::development.development',
-      'oneToMany',
+      'manyToMany',
       'api::resource.resource'
     >;
     internal_notes: Attribute.Text &
@@ -1122,9 +1123,9 @@ export interface ApiResourceResource extends Schema.CollectionType {
         'Utility'
       ]
     >;
-    development: Attribute.Relation<
+    developments: Attribute.Relation<
       'api::resource.resource',
-      'manyToOne',
+      'manyToMany',
       'api::development.development'
     >;
     createdAt: Attribute.DateTime;

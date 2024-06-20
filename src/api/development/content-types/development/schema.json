@@ -4,7 +4,8 @@
   "info": {
     "singularName": "development",
     "pluralName": "developments",
-    "displayName": "Development"
+    "displayName": "Development",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -40,14 +41,15 @@
       "type": "text"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -80,9 +82,9 @@
     },
     "resources": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::resource.resource",
-      "mappedBy": "development"
+      "mappedBy": "developments"
     },
     "internal_notes": {
       "pluginOptions": {

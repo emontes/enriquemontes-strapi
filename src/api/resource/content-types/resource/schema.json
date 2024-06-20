@@ -50,9 +50,9 @@
         "Utility"
       ]
     },
-    "development": {
+    "developments": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::development.development",
       "inversedBy": "resources"
     }
