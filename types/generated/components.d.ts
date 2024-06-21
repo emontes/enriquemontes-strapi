@@ -121,6 +121,18 @@ export interface PageSectionItemsServiceItem extends Schema.Component {
   };
 }
 
+export interface PageSectionsContact extends Schema.Component {
+  collectionName: 'components_page_sections_contacts';
+  info: {
+    displayName: 'Contact';
+    icon: 'envelop';
+  };
+  attributes: {
+    Heading: Attribute.Component<'heading.heading'>;
+    Image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface PageSectionsDev extends Schema.Component {
   collectionName: 'components_page_sections_devs';
   info: {
@@ -296,6 +308,7 @@ declare module '@strapi/types' {
       'page-section-items.job-description': PageSectionItemsJobDescription;
       'page-section-items.job-item': PageSectionItemsJobItem;
       'page-section-items.service-item': PageSectionItemsServiceItem;
+      'page-sections.contact': PageSectionsContact;
       'page-sections.dev': PageSectionsDev;
       'page-sections.hero-home': PageSectionsHeroHome;
       'page-sections.hero-section': PageSectionsHeroSection;

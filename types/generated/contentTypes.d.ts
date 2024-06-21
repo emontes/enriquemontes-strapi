@@ -1056,7 +1056,8 @@ export interface ApiEnriquePageEnriquePage extends Schema.CollectionType {
         'page-sections.jobs',
         'page-sections.services',
         'page-sections.resour',
-        'page-sections.dev'
+        'page-sections.dev',
+        'page-sections.contact'
       ]
     > &
       Attribute.SetPluginOptions<{
