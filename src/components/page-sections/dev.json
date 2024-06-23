@@ -16,6 +16,10 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::development.development"
+    },
+    "show_all": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

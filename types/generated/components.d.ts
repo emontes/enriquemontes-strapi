@@ -147,6 +147,7 @@ export interface PageSectionsDev extends Schema.Component {
       'oneToMany',
       'api::development.development'
     >;
+    show_all: Attribute.Boolean & Attribute.DefaultTo<false>;
   };
 }
 
