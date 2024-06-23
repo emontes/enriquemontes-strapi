@@ -181,8 +181,6 @@ export interface PageSectionsHeroSection extends Schema.Component {
     Heading: Attribute.Component<'heading.heading'> & Attribute.Required;
     SubTitle: Attribute.Component<'heading.heading'>;
     HeroActions: Attribute.Component<'button.buttons', true>;
-    HeroImage: Attribute.Media<'images', true>;
-    Centered: Attribute.Boolean & Attribute.DefaultTo<false>;
   };
 }
 
@@ -240,7 +238,6 @@ export interface PageSectionsSimpleParagraph extends Schema.Component {
   };
   attributes: {
     Content: Attribute.RichText & Attribute.Required;
-    ActionButtons: Attribute.Component<'button.buttons', true>;
     IsParagraphSecondary: Attribute.Boolean & Attribute.DefaultTo<false>;
   };
 }

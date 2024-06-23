@@ -31,19 +31,6 @@
       "type": "component",
       "repeatable": true,
       "component": "button.buttons"
-    }, 
-    "HeroImage": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
-    "Centered": {
-      "type": "boolean",
-      "default": false
     }
-    
   }
 }
