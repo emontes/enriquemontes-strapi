@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_page_sections_testis",
+  "info": {
+    "displayName": "Testi",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "Background": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "testimonials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::testimonial.testimonial"
+    }
+  }
+}

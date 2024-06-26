@@ -242,6 +242,22 @@ export interface PageSectionsSimpleParagraph extends Schema.Component {
   };
 }
 
+export interface PageSectionsTesti extends Schema.Component {
+  collectionName: 'components_page_sections_testis';
+  info: {
+    displayName: 'Testi';
+    icon: 'write';
+  };
+  attributes: {
+    Background: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    testimonials: Attribute.Relation<
+      'page-sections.testi',
+      'oneToMany',
+      'api::testimonial.testimonial'
+    >;
+  };
+}
+
 export interface SharedMetaSocial extends Schema.Component {
   collectionName: 'components_shared_meta_socials';
   info: {
@@ -314,6 +330,7 @@ declare module '@strapi/types' {
       'page-sections.resour': PageSectionsResour;
       'page-sections.services': PageSectionsServices;
       'page-sections.simple-paragraph': PageSectionsSimpleParagraph;
+      'page-sections.testi': PageSectionsTesti;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
     }

@@ -1057,7 +1057,8 @@ export interface ApiEnriquePageEnriquePage extends Schema.CollectionType {
         'page-sections.services',
         'page-sections.resour',
         'page-sections.dev',
-        'page-sections.contact'
+        'page-sections.contact',
+        'page-sections.testi'
       ]
     > &
       Attribute.SetPluginOptions<{
@@ -1146,6 +1147,38 @@ export interface ApiResourceResource extends Schema.CollectionType {
   };
 }
 
+export interface ApiTestimonialTestimonial extends Schema.CollectionType {
+  collectionName: 'testimonials';
+  info: {
+    singularName: 'testimonial';
+    pluralName: 'testimonials';
+    displayName: 'Testimonial';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    name: Attribute.String;
+    title: Attribute.String;
+    text: Attribute.Text;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::testimonial.testimonial',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::testimonial.testimonial',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1169,6 +1202,7 @@ declare module '@strapi/types' {
       'api::enrique-header.enrique-header': ApiEnriqueHeaderEnriqueHeader;
       'api::enrique-page.enrique-page': ApiEnriquePageEnriquePage;
       'api::resource.resource': ApiResourceResource;
+      'api::testimonial.testimonial': ApiTestimonialTestimonial;
     }
   }
 }
