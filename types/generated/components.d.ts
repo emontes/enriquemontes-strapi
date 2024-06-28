@@ -239,6 +239,7 @@ export interface PageSectionsSimpleParagraph extends Schema.Component {
   attributes: {
     Content: Attribute.RichText & Attribute.Required;
     IsParagraphSecondary: Attribute.Boolean & Attribute.DefaultTo<false>;
+    DivideInParagraphs: Attribute.Boolean & Attribute.DefaultTo<true>;
   };
 }
 
