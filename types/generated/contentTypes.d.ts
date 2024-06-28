@@ -1058,7 +1058,8 @@ export interface ApiEnriquePageEnriquePage extends Schema.CollectionType {
         'page-sections.resour',
         'page-sections.dev',
         'page-sections.contact',
-        'page-sections.testi'
+        'page-sections.testi',
+        'page-sections.paragraph'
       ]
     > &
       Attribute.SetPluginOptions<{

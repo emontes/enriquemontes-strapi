@@ -199,6 +199,20 @@ export interface PageSectionsJobs extends Schema.Component {
   };
 }
 
+export interface PageSectionsParagraph extends Schema.Component {
+  collectionName: 'components_page_sections_paragraphs';
+  info: {
+    displayName: 'Paragraph';
+    icon: 'dashboard';
+    description: '';
+  };
+  attributes: {
+    Title: Attribute.String;
+    Images: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    Content: Attribute.RichText;
+  };
+}
+
 export interface PageSectionsResour extends Schema.Component {
   collectionName: 'components_page_sections_resours';
   info: {
@@ -328,6 +342,7 @@ declare module '@strapi/types' {
       'page-sections.hero-home': PageSectionsHeroHome;
       'page-sections.hero-section': PageSectionsHeroSection;
       'page-sections.jobs': PageSectionsJobs;
+      'page-sections.paragraph': PageSectionsParagraph;
       'page-sections.resour': PageSectionsResour;
       'page-sections.services': PageSectionsServices;
       'page-sections.simple-paragraph': PageSectionsSimpleParagraph;

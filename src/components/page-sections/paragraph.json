@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_page_sections_paragraphs",
+  "info": {
+    "displayName": "Paragraph",
+    "icon": "dashboard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Content": {
+      "type": "richtext"
+    }
+  }
+}
