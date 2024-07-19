@@ -7,4 +7,8 @@ module.exports = ({ env }) => ({
   webhooks: {
     populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
   },
+  admin: {
+    url: '/dashboard',
+    serveAdminPanel: true,  // Asegura que esto está presente
+  },
 });
