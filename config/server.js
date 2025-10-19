@@ -11,4 +11,9 @@ module.exports = ({ env }) => ({
     url: '/dashboard',
     serveAdminPanel: true,  // Asegura que esto está presente
   },
+  transfer: {
+    remote: {
+      enabled: true,
+    },
+  },
 });
