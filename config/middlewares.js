@@ -5,16 +5,17 @@ module.exports = [
 		name: "strapi::security",
 		config: {
 			contentSecurityPolicy: {
+				useDefaults: true,
 				directives: {
+					"connect-src": ["'self'", "https:"],
 					"img-src": [
 						"'self'",
 						"data:",
 						"blob:",
 						"https://res.cloudinary.com",
 						"https://market-assets.strapi.io",
-						// Aquí puedes poner cualquier otra fuente que necesites
 					],
-					// Puedes necesitar agregar otras directivas aquí
+					upgradeInsecureRequests: null,
 				},
 			},
 		},
