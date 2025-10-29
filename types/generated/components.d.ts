@@ -1,4 +1,4 @@
-import type { Schema, Attribute } from '@strapi/strapi';
+import type { Attribute, Schema } from '@strapi/strapi';
 
 export interface ButtonButtons extends Schema.Component {
   collectionName: 'components_button_buttons';
@@ -7,9 +7,9 @@ export interface ButtonButtons extends Schema.Component {
     icon: 'bold';
   };
   attributes: {
-    Text: Attribute.String;
     Link: Attribute.String;
     Primary: Attribute.Boolean;
+    Text: Attribute.String;
   };
 }
 
@@ -42,33 +42,33 @@ export interface HeaderDropDownItems extends Schema.Component {
     displayName: 'DropDownItems';
   };
   attributes: {
+    Image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     LinkText: Attribute.String;
     LinkUrl: Attribute.String;
-    Image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
 export interface HeaderLinkItem extends Schema.Component {
   collectionName: 'components_header_link_items';
   info: {
+    description: '';
     displayName: 'Link Item';
     icon: 'link';
-    description: '';
   };
   attributes: {
+    DropDownItems: Attribute.Component<'header.drop-down-items', true>;
+    IsDropDown: Attribute.Boolean & Attribute.DefaultTo<false>;
     LinkText: Attribute.String;
     LinkUrl: Attribute.String;
-    IsDropDown: Attribute.Boolean & Attribute.DefaultTo<false>;
-    DropDownItems: Attribute.Component<'header.drop-down-items', true>;
   };
 }
 
 export interface HeadingHeading extends Schema.Component {
   collectionName: 'components_heading_headings';
   info: {
+    description: '';
     displayName: 'Heading';
     icon: 'filter';
-    description: '';
   };
   attributes: {
     HeadingText: Attribute.String;
@@ -91,9 +91,9 @@ export interface PageSectionItemsJobDescription extends Schema.Component {
 export interface PageSectionItemsJobItem extends Schema.Component {
   collectionName: 'components_page_section_items_job_items';
   info: {
+    description: '';
     displayName: 'JobItem';
     icon: 'briefcase';
-    description: '';
   };
   attributes: {
     company: Attribute.String &
@@ -101,23 +101,23 @@ export interface PageSectionItemsJobItem extends Schema.Component {
       Attribute.SetMinMaxLength<{
         minLength: 4;
       }>;
-    position: Attribute.String & Attribute.Required;
     date: Attribute.String & Attribute.Required;
     desc: Attribute.Component<'page-section-items.job-description', true>;
+    position: Attribute.String & Attribute.Required;
   };
 }
 
 export interface PageSectionItemsServiceItem extends Schema.Component {
   collectionName: 'components_page_section_items_service_items';
   info: {
+    description: '';
     displayName: 'Service Item';
     icon: 'cube';
-    description: '';
   };
   attributes: {
     icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    title: Attribute.String;
     text: Attribute.RichText;
+    title: Attribute.String;
   };
 }
 
@@ -136,17 +136,17 @@ export interface PageSectionsContact extends Schema.Component {
 export interface PageSectionsDev extends Schema.Component {
   collectionName: 'components_page_sections_devs';
   info: {
+    description: '';
     displayName: 'Developments';
     icon: 'briefcase';
-    description: '';
   };
   attributes: {
-    Heading: Attribute.Component<'heading.heading'>;
     developments: Attribute.Relation<
       'page-sections.dev',
       'oneToMany',
       'api::development.development'
     >;
+    Heading: Attribute.Component<'heading.heading'>;
     show_all: Attribute.Boolean & Attribute.DefaultTo<false>;
   };
 }
@@ -154,17 +154,17 @@ export interface PageSectionsDev extends Schema.Component {
 export interface PageSectionsHeroHome extends Schema.Component {
   collectionName: 'components_page_sections_hero_homes';
   info: {
+    description: '';
     displayName: 'HeroHome';
     icon: 'gate';
-    description: '';
   };
   attributes: {
+    BackgroundImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Header1: Attribute.String;
     Header3: Attribute.String;
     Header4: Attribute.String;
     LinkText: Attribute.String;
     LinkUrl: Attribute.String;
-    BackgroundImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     ProfileImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
@@ -172,62 +172,62 @@ export interface PageSectionsHeroHome extends Schema.Component {
 export interface PageSectionsHeroSection extends Schema.Component {
   collectionName: 'components_hero_items_hero_sections';
   info: {
+    description: '';
     displayName: 'HeroSection';
     icon: 'cube';
-    description: '';
   };
   attributes: {
     BackgroundImage: Attribute.Media<'images'>;
     Heading: Attribute.Component<'heading.heading'> & Attribute.Required;
-    SubTitle: Attribute.Component<'heading.heading'>;
     HeroActions: Attribute.Component<'button.buttons', true>;
+    SubTitle: Attribute.Component<'heading.heading'>;
   };
 }
 
 export interface PageSectionsJobs extends Schema.Component {
   collectionName: 'components_page_sections_jobs';
   info: {
+    description: '';
     displayName: 'Jobs';
     icon: 'stack';
-    description: '';
   };
   attributes: {
-    Title: Attribute.String;
-    ShowLink: Attribute.Boolean;
-    LinkText: Attribute.String;
     Job: Attribute.Component<'page-section-items.job-item', true>;
+    LinkText: Attribute.String;
+    ShowLink: Attribute.Boolean;
+    Title: Attribute.String;
   };
 }
 
 export interface PageSectionsParagraph extends Schema.Component {
   collectionName: 'components_page_sections_paragraphs';
   info: {
+    description: '';
     displayName: 'Paragraph';
     icon: 'dashboard';
-    description: '';
   };
   attributes: {
-    Title: Attribute.String;
-    Images: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     Content: Attribute.RichText;
+    Images: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    Title: Attribute.String;
   };
 }
 
 export interface PageSectionsResour extends Schema.Component {
   collectionName: 'components_page_sections_resours';
   info: {
+    description: '';
     displayName: 'Resources';
     icon: 'cog';
-    description: '';
   };
   attributes: {
-    Title: Attribute.String;
     HeadingType: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']>;
     resources: Attribute.Relation<
       'page-sections.resour',
       'oneToMany',
       'api::resource.resource'
     >;
+    Title: Attribute.String;
   };
 }
 
@@ -246,14 +246,14 @@ export interface PageSectionsServices extends Schema.Component {
 export interface PageSectionsSimpleParagraph extends Schema.Component {
   collectionName: 'components_simpl_p_simple_paragraphs';
   info: {
+    description: '';
     displayName: 'Simple Paragraph';
     icon: 'feather';
-    description: '';
   };
   attributes: {
     Content: Attribute.RichText & Attribute.Required;
-    IsParagraphSecondary: Attribute.Boolean & Attribute.DefaultTo<false>;
     DivideInParagraphs: Attribute.Boolean & Attribute.DefaultTo<true>;
+    IsParagraphSecondary: Attribute.Boolean & Attribute.DefaultTo<false>;
   };
 }
 
@@ -280,6 +280,12 @@ export interface SharedMetaSocial extends Schema.Component {
     icon: 'project-diagram';
   };
   attributes: {
+    description: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 65;
+      }>;
+    image: Attribute.Media<'images' | 'files' | 'videos'>;
     socialNetwork: Attribute.Enumeration<['Facebook', 'Twitter']> &
       Attribute.Required;
     title: Attribute.String &
@@ -287,41 +293,35 @@ export interface SharedMetaSocial extends Schema.Component {
       Attribute.SetMinMaxLength<{
         maxLength: 60;
       }>;
-    description: Attribute.String &
-      Attribute.Required &
-      Attribute.SetMinMaxLength<{
-        maxLength: 65;
-      }>;
-    image: Attribute.Media<'images' | 'files' | 'videos'>;
   };
 }
 
 export interface SharedSeo extends Schema.Component {
   collectionName: 'components_shared_seos';
   info: {
+    description: '';
     displayName: 'seo';
     icon: 'search';
-    description: '';
   };
   attributes: {
+    canonicalURL: Attribute.String;
+    keywords: Attribute.Text;
+    metaDescription: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 210;
+        minLength: 50;
+      }>;
+    metaImage: Attribute.Media<'images' | 'files' | 'videos'>;
+    metaRobots: Attribute.String;
+    metaSocial: Attribute.Component<'shared.meta-social', true>;
     metaTitle: Attribute.String &
       Attribute.Required &
       Attribute.SetMinMaxLength<{
         maxLength: 100;
       }>;
-    metaDescription: Attribute.String &
-      Attribute.Required &
-      Attribute.SetMinMaxLength<{
-        minLength: 50;
-        maxLength: 210;
-      }>;
-    metaImage: Attribute.Media<'images' | 'files' | 'videos'>;
-    metaSocial: Attribute.Component<'shared.meta-social', true>;
-    keywords: Attribute.Text;
-    metaRobots: Attribute.String;
-    structuredData: Attribute.JSON;
     metaViewport: Attribute.String;
-    canonicalURL: Attribute.String;
+    structuredData: Attribute.JSON;
   };
 }
 
