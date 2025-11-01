@@ -13,11 +13,9 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "pluginOptions": {},
       "type": "string"
     },
     "date": {
-      "pluginOptions": {},
       "type": "string"
     },
     "image": {
@@ -29,11 +27,9 @@
         "files",
         "videos",
         "audios"
-      ],
-      "pluginOptions": {}
+      ]
     },
     "url": {
-      "pluginOptions": {},
       "type": "string"
     },
     "kind": {
@@ -55,6 +51,10 @@
       "relation": "manyToMany",
       "target": "api::development.development",
       "inversedBy": "resources"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }
